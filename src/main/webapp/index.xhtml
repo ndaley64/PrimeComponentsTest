@@ -13,17 +13,11 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width"/>
         <script src="http://maps.google.com/maps/api/js?sensor=false"
         type="text/javascript"></script>
-        <script type="text/javascript">
-            function toggleMap() {
-                    $('#map').hide();
-            }
-        </script>
     </h:head>
     <h:body>
         <h:form prependId="false">
             <p:menu>
-                <p:menuitem id="show" value="Show" onclick="jQuery('#map').show()"/>
-                <p:menuitem id="hide" value="Hide" onclick="jQuery('#map').hide()"/>
+                <p:menuitem value="Map" onclick="jQuery('#map').toggle()"/>
             </p:menu>
             
             <p:panel id="map" style="width:630px;height:415px;text-align:left;" closable="true" toggleable="true">
